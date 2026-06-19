@@ -1102,6 +1102,19 @@ h2 {
     padding: 56px 0;
   }
 
+  .framework-detail {
+    gap: 28px;
+    padding-bottom: 34px;
+  }
+
+  .case-study {
+    padding-top: 34px;
+  }
+
+  .section-heading {
+    margin-bottom: 24px;
+  }
+
   .hero {
     gap: 34px;
     padding-top: 48px;
@@ -1195,9 +1208,12 @@ h2 {
   }
 
   .dashboard-visual,
-  .domain-image,
-  .case-image {
+  .domain-image {
     aspect-ratio: 4 / 3;
+  }
+
+  .case-image {
+    aspect-ratio: 16 / 10;
   }
 
   .trust-visual {
@@ -1234,11 +1250,50 @@ h2 {
   }
 
   .drift-table {
+    gap: 12px;
+    padding: 12px;
+    border: 0;
+    background: transparent;
     font-size: 0.76rem;
   }
 
   .drift-table div {
-    min-width: 560px;
+    min-width: 0;
+    grid-template-columns: 1fr;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.78);
+  }
+
+  .drift-table div:first-child {
+    display: none;
+  }
+
+  .drift-table span,
+  .drift-table span:first-child {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    font-weight: 700;
+  }
+
+  .drift-table div:last-child span {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .drift-table div span:last-child {
+    border-bottom: 0;
+  }
+
+  .drift-table span::before {
+    flex: 0 0 auto;
+    color: var(--stone);
+    content: attr(data-label);
+    font-weight: 900;
+    text-transform: uppercase;
   }
 }
 
@@ -1325,6 +1380,13 @@ h2 {
   }
 
   .drift-table div {
-    min-width: 500px;
+    min-width: 0;
+  }
+
+  .drift-table span,
+  .drift-table span:first-child {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
   }
 }
